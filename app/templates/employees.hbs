@@ -1,0 +1,24 @@
+<div>
+
+<h3><button class="button ember-view" {{action "toggleForm"}}>Add Employee</button></h3>
+{{#if isShowingForm}}
+{{input class="ember-view" type="text" value=newEmployee.name placeholder="Your Name"}}
+{{input type="text" value=newEmployee.location placeholder="Your location"}}
+{{input type="text" value=newEmployee.contact placeholder="Your contact"}}
+{{input type="text" value=newEmployee.image placeholder="Your image url"}}
+<button class="button ember-view" {{action "saveRecord" newEmployee}}>Done</button>
+{{/if}}
+
+</div>
+
+
+<div style="margin-top: 20px">
+{{#each model as |employee|}}
+  <div>
+  <h3>{{employee.name}}</h3>
+  <span style="font-weight: bold">Location:</span> {{employee.location}}
+  <span style="font-weight: bold">Contact:</span> {{employee.contact}}
+</div>
+{{/each}}
+
+</div>

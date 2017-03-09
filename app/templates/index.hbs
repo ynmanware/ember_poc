@@ -1,0 +1,28 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome!</h2>
+  <p>
+   <div class="col-md-6 col-sm-7 col-xs-11 fis_full_width">
+          <a href="http://www.fisglobal.com/About-Us/Media-Room/News-Releases/2016/FIS-and-Payment-Alliance-International-Bring-Cardless-Cash-to-Consumers-at-Retail-Locations" target="_blank">
+               <h1 class="fis_banner_content_bigtext">CARDLESS CASH GOES NATIONWIDE</h1>
+               <h3 class="fis_banner_content_subtext">FIS partners with Payment Alliance International to make Cardless Cash available across the United States.<span>HERE’S HOW.</span>
+               </h3>
+          </a>
+     </div>
+  </p>
+  {{#link-to 'about' class="button"}}
+    About Us
+  {{/link-to}}
+</div>
+
+{{#each model as |solution|}}
+  <article class="listing">
+    <h3>{{solution.title}}</h3>
+    <div class="detail owner">
+      <span>Owner:</span> {{solution.description}}
+    </div>
+    <div style="float:right">
+    <img src="{{solution.image  }}" class="image" alt="">
+    </div>
+  </article>
+{{/each}}
